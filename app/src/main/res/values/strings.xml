@@ -1,0 +1,218 @@
+<resources>
+    <string name="app_name">Sights and Sounds</string>
+    <!--Text for location selection-->
+    <string name="select_location">Select a location</string>
+    <!--Name text for Calabar-->
+    <string name="calabar">Calabar</string>
+    <!--Header text for Historical attraction fragment-->
+    <string name="historical">History</string>
+    <!--Header text for attractions TabLayout-->
+    <string name="attractions">Attractions</string>
+    <!--Header Text for Natural attractions-->
+    <string name="natural_att">Nature</string>
+    <!--Header text for lodgings fragment-->
+    <string name="hotspots">Hot Spots</string>
+    <!--Header Text for Art fragment-->
+    <string name="art">Art</string>
+    <!--Header text for Tab Activity-->
+    <string name="activity_tab">Tabs</string>
+    <!--Name text for Proceed button-->
+    <string name="proceed">Proceed</string>
+
+    <!--Name text for Amber hotel-->
+    <string name="hotel_amber">Amber Hotel</string>
+    <!--Name text for Obudu Ranch-->
+    <string name="lodge_obudu">Obudu Ranch Lodge</string>
+    <!--Name text for Azari hotel-->
+    <string name="hotel_azari">Azari Hotels</string>
+    <!--Name text for Transcorp hotel-->
+    <string name="hotel_transcorp">Transcorp Hotel</string>
+    <!--Name Text for Hotel Five-Two-Zero-->
+    <string name="hotel_five_two_zero">Hotel 520</string>
+
+    <!--Name text for Obudu-->
+    <string name="obudu">Obudu </string>
+    <!--Name text for Obudu Montain Resort-->
+    <string name="obudu_montain">Obudu Mountain Resort</string>
+    <!--Obudu details text-->
+    <string name="obudu_dets">
+        Aloft in the clouds, the Obudu Mountain Resort (formerly known as the Obudu Cattle Ranch)
+        is a ranch and resort on the Obudu Plateau in Cross River State, Nigeria.\n
+        It was developed in 1951 by M. McCaughley,
+        a Scot who first explored the mountain ranges in 1949.\n
+        Today, the Obudu Montain Resort is one of the most visited location is Nigeria with its
+        awe-inspiring landscapes and breath-taking scenery
+    </string>
+    <!--Name Text for Cross River State-->
+    <string name="cross_river">Cross River State </string>
+    <!--CrossRiver Details-->
+    <string name="cross_dets">
+        Cross River is one of Nigeria\'s 36 states.\n
+        It is located southeast of the country at Biafrabukta and was founded in 1967.\n
+        Previously, it was part of the Eastern Region and in the period 1967 to 1976 it was the South-Eastern State.\n
+        In 1987, the area that became part of Akwa Ibom State was divorced.\n
+        The state is named after River Cross . The state administration center is located in the city ​​of Calabar .</string>
+
+    <!--Name text for Ikom-->
+    <string name="ikom">Ikom</string>
+    <!--Name text for Agbokim falls-->
+    <string name="agbokim_falls">Agbokim Falls</string>
+    <!--Agbokim falls details-->
+    <string name="agbokim_dets">
+       Nicknamed, \"The smoke that thunders\", this gem of nature is situated about 17 kilometers
+        from Ikom and 315 kilometers from Calabar in the Etung local Council area of Cross River State is Agbokim Waterfalls,
+        which is made up of seven streams.\n
+        Surrounded by steep hills and valleys, which are encircled in a rainbow-like atmosphere;
+        Agbokim fall remains one of the best destinations in Cross River State and Nigeria.\n
+        The closeness of the Waterfalls to a neighbouring Cameron provides revelers an ample
+        opportunity of having cross-border experience.\n
+        The waterfall is made up of seven streams, which chutes over steep cliff, providing
+        a seven faced falls. It sits on the cross river and descends in terraces,
+        through the tropical rainforest; which itself, is picturesque, as it always looks lush and green.
+    </string>
+
+    <!--Name text for Akampka-->
+    <string name="akamkpa">Akamkpa</string>
+    <!--Name Text for Afi Mountain Wildlife Sanctuary-->
+    <string name="afi_sanctuary">Afi Mountain Wildlife Sanctuary</string>
+    <!--Text for Afi details-->
+    <string name="afi_dets">
+        Formerly part of the Afi River Forest Reserve, the Afi Mountain Wildlife Sanctuary was
+        established in 2000 to provide improved protection to important populations of several
+        endangered species including the critically endangered Cross River gorilla,
+        the Nigeria-Cameroon chimpanzee, the drill and the grey-necked Picathartes or rockfowl.\n
+        Afi is covered by roughly 100km² of lowland and sub-montane forest with rocky peaks
+        rising to altitudes of 1,300m.\n
+        On the western flank of the mountain is a large
+        grassland roost of migratory European barn swallows, estimated to contain up to 20 million
+        birds at times and reputed to be the largest wintering roost site of swallows in Africa.\n
+        The Afi Mountain has been identified as an IBA
+        (Important Bird Area) for Nigeria. It is also a significant and widely recognized spot
+        in Africa to watch the migration of large swallows. This indeed is a location for those
+        seeking to experience a whole new world.
+    </string>
+
+    <!--Name text for Tinapa resort-->
+    <string name="tinapa">Tinapa Resort</string>
+    <!--Text for Tinapa details-->
+    <string name="tinapa_dets">
+        Situated on the outskirts of Calabar, Tinapa is an integrated Business and Leisure
+        promising the best of both worlds.\n
+        The resort boasts of World class conference centres as well strings of shops and malls
+        for those with an eye for business.\n
+        Also, it possesses a 2km beach front, a 5-star hotel, 4 Standard sized studios, an arcade park
+        as well as a water park; which has a 200ft slide, for those just looking to unwind.\n
+        The resort is also equipped with a light rail network to facilitate movement around its environs.\n
+        Indeed, Tinapa really takes on the Herculean task of balancing work and play in its stride.
+    </string>
+
+    <!--Name text for Marina Resort-->
+    <string name="marina_resort">Marina Resort</string>
+    <!--Text for Marina resort Details-->
+    <string name="marina_dets">
+        This is one of Calabar’s major tourist destinations./n
+        It is a huge and expansive resort with amazing multi-purpose facilities as well as
+        unforgettable moments at place such as the Slave History Museum, a cinema house, table
+        tennis court, hotel, night club, a carousel for the children, walkway and open restaurants
+        where patrons can sit, relax and eat – with breathtaking views of the Calabar river.\n
+        The Tortuga island is a stunning sit-in or sit-out location within the resort
+        where you can grab a seat, recline and place an order while you take in the river view as
+        well as the alluring smell of the long rows of trimmed flower hedges.\n
+        Taking a boat cruise on the Calabar river is a fun activity to look forward.
+        The beautiful cruise boat takes you round the Marina waters.
+        At the other end of the river, you’ll see a small house which is built on the
+        site where Mary Slessor’s former house was situated.
+    </string>
+
+    <!--String values for History Fragment-->
+    <!--Name Text for Duke Town primary School-->
+    <string name="duke_town">Duke Town Primary School</string>
+    <!--Name text for Hope Waddell Secondary School-->
+    <string name="hope_waddell">Hope Waddell Training Institution</string>
+    <!--Text for Hope Waddell details-->
+    <string name="hope_waddell_dets">
+        Established in 1895, this is one of the oldest institutions in the Nigeria.\n
+        Originally set up as a base for arriving Scottish missionaries, it quickly transformed
+        into an educational and skills acquisition center.
+    </string>
+
+    <!--Name text for Mary Slessor's Residence-->
+    <string name="mary_slessor">Mary Slessor\'s Residence</string>
+
+    <!--Name text for old residency-->
+    <string name="old_residency">Old Residency</string>
+    <!--Text for old residency details-->
+    <string name="old_recidency_dets">This was originally the residence of the highest ranked
+    British personnel in Calabar. It had been transformed to the residence of the military governors
+    during the military regime in Nigeria.
+        \nHowever, today, it serves a different purpose of a multifaceted museum.
+    </string>
+    <!--Name text Slave history museum-->
+    <string name="slave_history">Slave History Museum</string>
+    <string name="slave_history_dets">Located in the Marina Resort along the Calabar harbour,
+    the Slave History Museum shows explicitly, the travails of Nigeria slaves who were sold
+    through the Calabar sea port.</string>
+
+    <!--String values for Art Fragment-->
+    <!--Name text for the Calabar Carnival-->
+    <string name="calabar_carnival">Calabar Carnival</string>
+    <string name="carnival_dets">
+        The Calabar Carnival tagged "Africa's Biggest Street Party", is one of the highlights of the
+        Cross River State Christmas festival which begins every 1 December and lasts until 31 December.\n
+        The festival was created as part of the vision of making the Cross River State, Nigeria,
+        the number one tourist destination for Nigerians and tourists all over the world.\n
+        This event which usually holds between December 26th and 28th has boosted the cultural mosaic
+        of Nigeria people while entertaining millions of spectators
+        within and outside the State, and boosting industry for all stakeholders.
+    </string>
+
+    <!--Name text for Ekpe Festival-->
+    <string name="ekpe_festival">Ekpe Festival</string>
+    <!--Text for Ekpe festival-->
+    <string name="ekpe_dets">
+       Ekpe, also known as Ekpo (Ibibio: Leopard), is a secret society flourishing chiefly among
+        the Efiks of the Cross River State, the Oron, of Akwa Ibom State, Nigeria, Arochukwu
+         and some parts of Abia State, as well as in the diaspora, such as in Cuba and Brazil.\n
+        The society is still active at the beginning of the 21st century, however, now it plays only a ceremonial role.
+        There are two distinct but related societies, the primary one in the Cross River, Arochukwu,
+        Akwa Ibom areas, and the secondary one among the Southern and Eastern Igbo groups.\n
+        It is general belief amongst the Efik native tribe, although hardly ever substantiated,
+        that the members of the Ekpe society invented the Nsibidi.
+        The Ekpe festival is an annual event that usually holds on the last Saturday of the
+        year in Calabar. It attracts displays from the different Ekpe societies from around the world.
+    </string>
+
+    <!--Name Text for Leboku festival-->
+    <string name="leboku_fest">Leboku Festival</string>
+    <!--Name text for Ugep-->
+    <string name="ugep">Ugep</string>
+    <string name="leboku_dets">
+        Leboku is the annual New Yam Festival of the Yakurr people.\n
+        The Leboku New Yam festival is peculiar to the core Yakạạ speaking communities of Idomi,
+        Ugep, Ekori, Mkpani and Nko and the international version is celebrated in Ugep once in a year.\n
+        This is celebrated to honor the earth goddess and the ancestral spirits of the land in Ugep,
+        one of the five settlements of Yakurr.\n
+        The three-week festival is the culmination of many events: the beginning of the yam harvest,
+        a time to appease the gods and ancestors, a public parade of engaged maidens, a commemoration
+        of events that led to the migration from the Yakurr ancestral home to the present site,
+        and a period of holiday in the Yakurr traditional calendar (mid-August through mid-September).\n
+        The Yakurr calendar runs from August to July. During the Leboku, people keep away from intense
+        farming activities and exchange visits with their families. The Leboku is also meant to usher in peace,
+        good health and prosperity.
+    </string>
+
+    <!--Name text for Ikom Monoliths-->
+    <string name="ikom_monoliths">Ikom Monoliths</string>
+    <!--Text for monolith-->
+    <string name="monolith_dets">
+
+    </string>
+    <string name="title_activity_attractions">AttractionsActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
