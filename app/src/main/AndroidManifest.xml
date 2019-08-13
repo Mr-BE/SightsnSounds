@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="c.codeblaq.sightsandsounds">
+    package="dev.mrbe.sightsnsounds">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="dev.mrbe.sightsnsounds.MainActivity">
             <!--<intent-filter>-->
             <!--<action android:name="android.intent.action.MAIN" />-->
 
@@ -17,24 +17,24 @@
             <!--</intent-filter>-->
         </activity>
         <activity
-            android:name=".TabActivity"
+            android:name="dev.mrbe.sightsnsounds.TabActivity"
             android:label="@string/attractions" />
         <activity
-            android:name=".HistoricalActivity"
+            android:name="dev.mrbe.sightsnsounds.HistoricalActivity"
             android:label="@string/historical" />
         <activity
-            android:name=".NatureActivity"
+            android:name="dev.mrbe.sightsnsounds.NatureActivity"
             android:label="@string/attractions" />
         <activity
-            android:name=".HotspotsActivity"
+            android:name="dev.mrbe.sightsnsounds.HotspotsActivity"
             android:label="@string/hotspots" />
-        <activity android:name=".FragmentFullDetailsActivity" />
-        <activity android:name=".MainActivity2"></activity>
-        <activity android:name=".ArtActivity" />
+        <activity android:name="dev.mrbe.sightsnsounds.FragmentFullDetailsActivity" />
+        <activity android:name="dev.mrbe.sightsnsounds.MainActivity2"></activity>
+        <activity android:name="dev.mrbe.sightsnsounds.ArtActivity" />
 
 
         <activity
-            android:name=".AttractionActivity"
+            android:name="dev.mrbe.sightsnsounds.AttractionActivity"
             android:label="@string/title_activity_attractions"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -45,14 +45,15 @@
         </activity>
 
         <activity
-            android:name=".FullDetailsActivity"
+            android:name="dev.mrbe.sightsnsounds.FullDetailsActivity"
             android:label="Attractions"
-            android:theme="@style/AppTheme.NoActionBar">
+           >
 
         </activity>
         <activity
-            android:name=".CategoryCatalogActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name="dev.mrbe.sightsnsounds.CategoryCatalogActivity"
+            android:parentActivityName="dev.mrbe.sightsnsounds.AttractionActivity"
+            android:label="Category"/>
 
     </application>
 
