@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="dev.mrbe.sightsnsounds">
 
     <application
@@ -8,8 +9,44 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name="dev.mrbe.sightsnsounds.MainActivity">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".TabActivity"
+            android:label="@string/attractions" />
+        <activity
+            android:name=".HistoricalActivity"
+            android:label="@string/historical" />
+        <activity
+            android:name=".NatureActivity"
+            android:label="@string/attractions" />
+        <activity
+            android:name=".HotspotsActivity"
+            android:label="@string/hotspots" />
+        <activity android:name=".FragmentFullDetailsActivity" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".ArtActivity" />
+        <activity
+            android:name=".AttractionActivity"
+            android:label="@string/title_activity_attractions"
+            android:theme="@style/AppTheme.NoActionBar">
             <!--<intent-filter>-->
             <!--<action android:name="android.intent.action.MAIN" />-->
 
@@ -17,44 +54,12 @@
             <!--</intent-filter>-->
         </activity>
         <activity
-            android:name="dev.mrbe.sightsnsounds.TabActivity"
-            android:label="@string/attractions" />
+            android:name=".FullDetailsActivity"
+            android:label="Attractions" />
         <activity
-            android:name="dev.mrbe.sightsnsounds.HistoricalActivity"
-            android:label="@string/historical" />
-        <activity
-            android:name="dev.mrbe.sightsnsounds.NatureActivity"
-            android:label="@string/attractions" />
-        <activity
-            android:name="dev.mrbe.sightsnsounds.HotspotsActivity"
-            android:label="@string/hotspots" />
-        <activity android:name="dev.mrbe.sightsnsounds.FragmentFullDetailsActivity" />
-        <activity android:name="dev.mrbe.sightsnsounds.MainActivity2"></activity>
-        <activity android:name="dev.mrbe.sightsnsounds.ArtActivity" />
-
-
-        <activity
-            android:name="dev.mrbe.sightsnsounds.AttractionActivity"
-            android:label="@string/title_activity_attractions"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name="dev.mrbe.sightsnsounds.FullDetailsActivity"
-            android:label="Attractions"
-           >
-
-        </activity>
-        <activity
-            android:name="dev.mrbe.sightsnsounds.CategoryCatalogActivity"
-            android:parentActivityName="dev.mrbe.sightsnsounds.AttractionActivity"
-            android:label="Category"/>
-
+            android:name=".CategoryCatalogActivity"
+            android:label="Category"
+            android:parentActivityName=".AttractionActivity" />
     </application>
 
 </manifest>
