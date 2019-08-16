@@ -1,6 +1,6 @@
 package dev.mrbe.sightsnsounds;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class FragmentFullDetailsActivity extends AppCompatActivity {
 //    /*Constant for location*/

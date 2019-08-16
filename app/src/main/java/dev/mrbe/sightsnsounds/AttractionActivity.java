@@ -3,29 +3,29 @@ package dev.mrbe.sightsnsounds;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import java.util.List;
-
-import dev.mrbe.sightsnsounds.Adapters.AttractionListRecyclerAdapter;
 
 public class AttractionActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,14 +35,20 @@ public class AttractionActivity extends AppCompatActivity
     private RecyclerView mRecyclerView;
     private DataManager mDataManager = DataManager.getInstance();
     private RecyclerView mCatatolgRecycler;
+    private ActionBar toolbar;
+
     private FirebaseUser mUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attraction);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        final Toolbar toolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+
+        toolbar = getSupportActionBar();
+        toolbar.setTitle("Home");
+        loadFragment(new HomeFragment());
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +61,7 @@ public class AttractionActivity extends AppCompatActivity
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -63,9 +69,56 @@ public class AttractionActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         View headerView = navigationView.getHeaderView(0);
 
-        //Initialize content
-        initDisplayContent();
+        //Set up bottom navigation bar
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                        Fragment fragment;
 
+                        //Toggle visible fragments
+                        switch (menuItem.getItemId()) {
+
+                            case R.id.action_home:
+                                toolbar.show();
+                                toolbar.setTitle("Home");
+                                fragment = new HomeFragment();
+                                loadFragment(fragment);
+                                break;
+                            case R.id.action_search:
+                                toolbar.show();
+                                toolbar.setTitle("Search");
+                                fragment = new SearchFragment();
+                                loadFragment(fragment);
+                                break;
+                            case R.id.action_fav:
+                                toolbar.show();
+                                toolbar.setTitle("Likes");
+                                fragment = new LikesFragment();
+                                loadFragment(fragment);
+                                break;
+                            case R.id.action_drawer:
+                                toolbar.hide();
+                                DrawerLayout drawer = findViewById(R.id.drawer_layout);
+                                drawer.openDrawer(Gravity.LEFT);
+                                break;
+                            default:
+                                toolbar.show();
+                                toolbar.setTitle("Home");
+                                fragment = new HomeFragment();
+                                loadFragment(fragment);
+                                break;
+                        }
+                        return true;
+                    }
+                }
+        );
+
+        //Initialize content
+//        initDisplayContent();
+
+        //Get current firebase user
         mUser = FirebaseAuth.getInstance().getCurrentUser();
 
         //get details
@@ -83,18 +136,18 @@ public class AttractionActivity extends AppCompatActivity
 
     }
 
-    private void initDisplayContent() {
-        mRecyclerView = findViewById(R.id.whole_attraction_list);
-
-        mCatatolgRecycler = findViewById(R.id.catalog_list);
-
-        List<Category> categories = mDataManager.getCategories();
-
-        AttractionListRecyclerAdapter adapter = new AttractionListRecyclerAdapter(this, categories);
-        mRecyclerView.setAdapter(adapter);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-    }
+//    private void initDisplayContent() {
+//        mRecyclerView = findViewById(R.id.whole_attraction_list);
+//
+//        mCatatolgRecycler = findViewById(R.id.catalog_list);
+//
+//        List<Category> categories = mDataManager.getCategories();
+//
+//        AttractionListRecyclerAdapter adapter = new AttractionListRecyclerAdapter(this, categories);
+//        mRecyclerView.setAdapter(adapter);
+//        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+//
+//    }
 
     private void getUserDetails() {
         if (mUser != null) {//User authenticated
@@ -112,6 +165,14 @@ public class AttractionActivity extends AppCompatActivity
         }
     }
 
+    //Load fragments
+    private void loadFragment(Fragment fragment) {
+        // load fragment
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_container, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
 
     @Override
     public void onBackPressed() {
