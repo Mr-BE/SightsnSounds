@@ -118,8 +118,8 @@ public class LoginActivity extends AppCompatActivity {
                 if (user != null) {
                     if (user.isEmailVerified()) {
                         Log.d(TAG, "onAuthStateChanged: signed_in " + user.getUid());
-                        Toast.makeText(LoginActivity.this, "Authenticated with: " + user.getEmail(),
-                                Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(LoginActivity.this, "Authenticated with: " + user.getEmail(),
+//                                Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(LoginActivity.this, "Check your email for verification link", Toast.LENGTH_SHORT).show();
                         FirebaseAuth.getInstance().signOut();
